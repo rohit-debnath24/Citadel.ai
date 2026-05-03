@@ -3,16 +3,16 @@
 import React from "react";
 
 const integrations = [
-  { name: "Echo", color: "text-blue-500" },
-  { name: "GraphQL", color: "text-pink-600" },
-  { name: "GitHub", color: "text-gray-900" },
-  { name: "GitHub Actions", color: "text-blue-600" },
-  { name: "GitLab", color: "text-orange-600" },
-  { name: "Docker", color: "text-blue-500" },
-  { name: "Kubernetes", color: "text-blue-700" },
-  { name: "PostgreSQL", color: "text-blue-800" },
-  { name: "MongoDB", color: "text-green-600" },
-  { name: "Redis", color: "text-red-600" },
+  { name: "OpenAI", color: "text-green-600" },
+  { name: "Claude", color: "text-purple-600" },
+  { name: "Ollama", color: "text-gray-900" },
+  { name: "FastAPI", color: "text-blue-500" },
+  { name: "Llama Guard", color: "text-orange-600" },
+  { name: "Pinecone", color: "text-blue-600" },
+  { name: "FAISS", color: "text-blue-400" },
+  { name: "LangChain", color: "text-green-700" },
+  { name: "HuggingFace", color: "text-yellow-600" },
+  { name: "Mistral", color: "text-orange-500" },
 ];
 
 const TechStack = () => {
@@ -20,7 +20,7 @@ const TechStack = () => {
     <section className="py-16 border-b border-gray-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-xs font-medium text-gray-500 uppercase tracking-widest mb-4">
-          Any Frameworks & CI/CD
+          Secures Any LLM & Agent Framework
         </div>
       </div>
 

@@ -31,23 +31,25 @@ const BottomCTA = () => {
           <div className="rounded-3xl p-12 relative overflow-hidden group bg-gradient-to-br from-[#ff7b25] to-[#ea580c] shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/20 blur-[80px] rounded-full group-hover:scale-150 transition-transform duration-700 pointer-events-none" />
              
-             <div className="relative z-10 text-white">
-               <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-                 Start testing for free.
-               </h2>
-               <p className="text-lg text-orange-100 mb-8 max-w-sm">
-                 Join thousands of developers automating their regression tests today.
-               </p>
-               
-               <div className="flex flex-col sm:flex-row gap-4">
-                 <Link href="#" className="inline-block bg-white text-[#ea580c] hover:bg-gray-50 px-8 py-3.5 rounded-full font-bold text-lg transition-colors shadow-sm text-center">
-                   Get Started
-                 </Link>
-                 <div className="hidden sm:flex items-center px-6 py-3.5 rounded-full bg-black/20 backdrop-blur-sm border border-white/10 font-mono text-sm">
-                   $ curl -O https://keploy.io/install.sh
-                 </div>
-               </div>
-             </div>
+             <section className="py-32 px-6 text-center relative overflow-hidden">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <h2 className="text-4xl md:text-6xl font-black text-gray-900 tracking-tighter mb-8 leading-tight">
+          READY TO SECURE<br />
+          <span className="text-orange-600 underline decoration-orange-500/20 underline-offset-8">YOUR AI AGENTS?</span>
+        </h2>
+        <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto font-medium">
+          Deploy the firewall in minutes. Sub-300ms latency. Zero security tax.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link href="#" className="bg-orange-600 text-white font-black px-10 py-5 rounded-2xl text-xl hover:bg-orange-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-600/30">
+            Get The Guardian Free
+          </Link>
+          <Link href="#" className="bg-white text-gray-900 border-2 border-gray-100 font-black px-10 py-5 rounded-2xl text-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-sm">
+            Contact Security Ops
+          </Link>
+        </div>
+      </div>
+    </section>
           </div>
 
         </div>

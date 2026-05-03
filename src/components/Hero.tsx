@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 const Hero = () => {
-  const [activeCard, setActiveCard] = useState(3); // AI Powered API Testing is active
+  const [activeCard, setActiveCard] = useState(3); // Shadow Model Detection is active
 
   const cards = [
-    { title: "Record Replay API Traffic", dotColor: "bg-purple-500", activeBg: "bg-purple-50/80" },
-    { title: "Coverage Reporting", dotColor: "bg-orange-500", activeBg: "bg-orange-50/80" },
-    { title: "Performance Testing", dotColor: "bg-pink-500", activeBg: "bg-pink-50/80" },
-    { title: "AI Powered API Testing", dotColor: "bg-fuchsia-500", activeBg: "bg-[#f8e5e5]/90" },
+    { title: "Input Sanitization", dotColor: "bg-blue-500", activeBg: "bg-blue-50/80", url: "/input-sanitization" },
+    { title: "Outbound DLP", dotColor: "bg-orange-500", activeBg: "bg-orange-50/80", url: "/dlp" },
+    { title: "Intent Drift Analysis", dotColor: "bg-purple-500", activeBg: "bg-purple-50/80", url: "/intent-monitoring" },
+    { title: "Shadow Model Detection", dotColor: "bg-red-500", activeBg: "bg-[#f8e5e5]/90", url: "/adversarial-detection" },
   ];
 
   return (
@@ -25,32 +25,38 @@ const Hero = () => {
         {/* Left Column */}
         <div className="max-w-xl z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 bg-white/60 backdrop-blur-md mb-8 shadow-sm">
-            <span className="text-orange-500">🚀</span>
-            <span className="text-gray-800 text-sm font-semibold tracking-tight">2 minutes to 90% coverage.</span>
+            <span className="text-orange-500">🛡️</span>
+            <span className="text-gray-800 text-sm font-semibold tracking-tight">AI Firewall for LLM Agents.</span>
             <Link href="#" className="text-blue-600 hover:text-blue-800 text-sm font-bold underline decoration-2 underline-offset-2 ml-1">
-              Try Now! &gt;
+              Live Demo &gt;
             </Link>
           </div>
 
           <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-[#1a1a1a]">
-            Test Your <br />
-            AI Code <span className="text-gray-400 font-medium tracking-normal text-5xl md:text-6xl italic">with</span> <br />
-            <span className="text-[#ea580c]">Production</span> <br />
-            <span className="text-[#ea580c]">Traffic</span> <br />
-            <span className="text-[#ea580c]">Sandboxes</span>
+            The Guardian <br />
+            <span className="text-gray-400 font-medium tracking-normal text-5xl md:text-6xl italic">Because your AI</span> <br />
+            <span className="text-[#ea580c]">shouldn't trust</span> <br />
+            <span className="text-[#ea580c]">everything it reads.</span>
           </h1>
 
           <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-lg tracking-tight">
-            Record regression tests from real <strong className="text-[#ea580c] font-bold">API traffic</strong> and replay into CI as <strong className="text-[#ea580c] font-bold">isolated sandboxes</strong>. Tests run in milliseconds, not hours.
+            Real-time <strong className="text-[#ea580c] font-bold">Proxy Firewall</strong> that intercepts malicious payloads, detects <strong className="text-[#ea580c] font-bold">Prompt Injections</strong>, and prevents sensitive data leakage in autonomous agent workflows.
           </p>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+             <Link href="#" className="bg-orange-600 text-white font-black px-8 py-4 rounded-xl text-lg hover:bg-orange-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-600/30">
+                Deploy The Guardian
+             </Link>
+             <Link href="#" className="bg-white text-gray-900 border border-gray-200 font-bold px-8 py-4 rounded-xl text-lg hover:bg-gray-50 transition-all">
+                Read Documentation
+             </Link>
+          </div>
         </div>
 
         {/* Right Column - Stacked Cards */}
         <div className="relative h-[550px] z-10 lg:ml-10 perspective-1000">
           {cards.map((card, idx) => {
             const isActive = activeCard === idx;
-            // Calculate a visual position from 0 (back) to 3 (front) based on the active card.
-            // This seamlessly cycles the deck so the active card is always at the front.
             const visualPos = (idx - activeCard - 1 + cards.length) % cards.length;
             
             const topOffset = visualPos * 45;
@@ -85,7 +91,7 @@ const Hero = () => {
                     </div>
                     {isActive && (
                       <span className="text-[#ea580c] text-sm font-bold flex items-center gap-1 tracking-tight">
-                        Know More &rarr;
+                        Live Monitor &rarr;
                       </span>
                     )}
                   </div>
@@ -100,32 +106,38 @@ const Hero = () => {
                            <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                            <div className="ml-auto flex items-center gap-2 px-3 py-1 bg-white/5 rounded-md text-xs text-gray-400 font-mono">
                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                             https://keploy.io/sandbox
+                             https://guardian.ai/intercept
                            </div>
                          </div>
                          {/* Mock Content */}
                          <div className="flex-1 p-6 flex flex-col gap-4 relative">
-                           {/* Animated scanning line on hover */}
-                           <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.8)] -translate-y-full group-hover/window:animate-[scan_2s_ease-in-out_infinite] z-20"></div>
-                           
-                           <div className="h-4 w-1/3 bg-white/10 rounded group-hover/window:bg-white/20 transition-colors duration-300"></div>
-                           
-                           <div className="h-32 w-full bg-orange-500/10 border border-orange-500/20 rounded-xl flex items-center justify-center relative overflow-hidden">
-                              {/* Pulse rings */}
-                              <div className="absolute inset-0 flex items-center justify-center group-hover/window:opacity-100 opacity-0 transition-opacity duration-500">
-                                <div className="absolute w-16 h-16 rounded-full border-2 border-orange-500/30 animate-ping"></div>
-                                <div className="absolute w-24 h-24 rounded-full border border-orange-500/20 animate-ping" style={{ animationDelay: '0.2s' }}></div>
-                                <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center shadow-[0_0_20px_rgba(234,88,12,0.6)]">
-                                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                                </div>
-                              </div>
-                              <span className="text-orange-500/50 font-mono text-sm group-hover/window:opacity-0 transition-opacity duration-300">Visualizer Loading...</span>
-                           </div>
-                           
-                           <div className="flex gap-2">
-                              <div className="h-2 w-16 bg-white/10 rounded group-hover/window:w-24 transition-all duration-500"></div>
-                              <div className="h-2 w-24 bg-white/10 rounded group-hover/window:w-16 transition-all duration-500 delay-100"></div>
-                           </div>
+                            {/* Animated scanning line on hover */}
+                            <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.8)] -translate-y-full group-hover/window:animate-[scan_2s_ease-in-out_infinite] z-20"></div>
+                            
+                            <div className="flex justify-between items-center mb-2">
+                               <div className="h-4 w-1/3 bg-white/10 rounded"></div>
+                               <div className="px-2 py-0.5 bg-red-500/20 text-red-400 text-[10px] font-mono rounded border border-red-500/30">THREAT DETECTED</div>
+                            </div>
+                            
+                            <div className="h-32 w-full bg-red-500/5 border border-red-500/20 rounded-xl flex items-center justify-center relative overflow-hidden">
+                               {/* Alert graphic */}
+                               <div className="flex flex-col items-center gap-2">
+                                  <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/40">
+                                     <svg className="w-6 h-6 text-red-500 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                  </div>
+                                  <span className="text-red-400 font-mono text-xs">Prompt Injection Attempt Blocked</span>
+                               </div>
+                            </div>
+                            
+                            <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                               <div className="flex justify-between text-[10px] font-mono text-gray-500 mb-1">
+                                  <span>Confidence</span>
+                                  <span>98.4%</span>
+                               </div>
+                               <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
+                                  <div className="h-full bg-red-500 w-[98.4%]"></div>
+                               </div>
+                            </div>
                          </div>
                       </div>
                     </div>

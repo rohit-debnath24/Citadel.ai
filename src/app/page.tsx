@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import FloatingSidebar from "@/components/FloatingSidebar";
 import Hero from "@/components/Hero";
 import FeaturesSection from "@/components/FeaturesSection";
-import ExpandTestCoverage from "@/components/ExpandTestCoverage";
+import SecurityLayers from "@/components/SecurityLayers";
 import AINativeBenefits from "@/components/AINativeBenefits";
 import TechStack from "@/components/TechStack";
 import MCPValidation from "@/components/MCPValidation";
@@ -30,7 +30,7 @@ export default function Home() {
         <FloatingSidebar />
         <Hero />
         <FeaturesSection />
-        <ExpandTestCoverage />
+        <SecurityLayers />
         <AINativeBenefits />
         <TechStack />
         <MCPValidation />
