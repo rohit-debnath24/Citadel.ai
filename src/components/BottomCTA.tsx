@@ -42,7 +42,7 @@ const BottomCTA = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="#" className="bg-orange-600 text-white font-black px-10 py-5 rounded-2xl text-xl hover:bg-orange-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-600/30">
-            Get The Guardian Free
+            Get Citadel.ai Free
           </Link>
           <Link href="#" className="bg-white text-gray-900 border-2 border-gray-100 font-black px-10 py-5 rounded-2xl text-xl hover:bg-gray-50 transition-all hover:scale-105 active:scale-95 shadow-sm">
             Contact Security Ops

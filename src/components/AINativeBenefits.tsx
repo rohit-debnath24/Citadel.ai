@@ -14,7 +14,7 @@ const AINativeBenefits = () => {
             Why LLM Security <span className="text-[#c2410c]">Can't Wait</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            As agents gain autonomy, the threat surface expands. The Guardian stops the most critical attack vectors before they execute.
+            As agents gain autonomy, the threat surface expands. Citadel.ai stops the most critical attack vectors before they execute.
           </p>
         </div>
 

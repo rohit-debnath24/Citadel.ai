@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
 
           <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-[#1a1a1a]">
-            The Guardian <br />
+            Citadel.ai <br />
             <span className="text-gray-400 font-medium tracking-normal text-5xl md:text-6xl italic">Because your AI</span> <br />
             <span className="text-[#ea580c]">shouldn't trust</span> <br />
             <span className="text-[#ea580c]">everything it reads.</span>
@@ -45,7 +45,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
              <Link href="#" className="bg-orange-600 text-white font-black px-8 py-4 rounded-xl text-lg hover:bg-orange-700 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-orange-600/30">
-                Deploy The Guardian
+                Deploy Citadel.ai
              </Link>
              <Link href="#" className="bg-white text-gray-900 border border-gray-200 font-bold px-8 py-4 rounded-xl text-lg hover:bg-gray-50 transition-all">
                 Read Documentation
@@ -106,7 +106,7 @@ const Hero = () => {
                            <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
                            <div className="ml-auto flex items-center gap-2 px-3 py-1 bg-white/5 rounded-md text-xs text-gray-400 font-mono">
                              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                             https://guardian.ai/intercept
+                             https://citadel.ai/intercept
                            </div>
                          </div>
                          {/* Mock Content */}

@@ -21,7 +21,7 @@ const MCPValidation = () => {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-          The Guardian enforces <strong className="text-gray-900">context-aware safety policies</strong> at every step of the agent loop. It ensures that no matter what the LLM generates, the external actions remain within secure, authorized boundaries.
+          Citadel.ai enforces <strong className="text-gray-900">context-aware safety policies</strong> at every step of the agent loop. It ensures that no matter what the LLM generates, the external actions remain within secure, authorized boundaries.
         </p>
 
         {/* Mock Policy architecture visual */}
