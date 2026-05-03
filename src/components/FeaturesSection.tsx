@@ -73,14 +73,14 @@ const FeaturesSection = () => {
 
       {/* Sticky Left Sidebar Navigation */}
       <div className="hidden lg:flex flex-col items-center gap-4 fixed left-4 top-1/2 -translate-y-1/2 z-50 bg-white/5 p-2 rounded-full border border-white/10 backdrop-blur-md">
-        <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeSection === "capture" ? "bg-white/20 text-white" : "text-gray-500 hover:text-white"}`} onClick={() => setActiveSection("capture")}>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeSection === "input" ? "bg-white/20 text-white" : "text-gray-500 hover:text-white"}`} onClick={() => setActiveSection("input")}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
         </button>
-        <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeSection === "dedup" ? "bg-white/20 text-white" : "text-gray-500 hover:text-white"}`} onClick={() => setActiveSection("dedup")}>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+        <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeSection === "adversarial" ? "bg-white/20 text-white" : "text-gray-500 hover:text-white"}`} onClick={() => setActiveSection("adversarial")}>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
         </button>
-        <button className="w-10 h-10 rounded-full flex items-center justify-center text-gray-500 hover:text-white transition-all">
-           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <button className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${activeSection === "intent" ? "bg-white/20 text-white" : "text-gray-500 hover:text-white"}`} onClick={() => setActiveSection("intent")}>
+           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
         </button>
       </div>
 
@@ -211,29 +211,7 @@ const FeaturesSection = () => {
                         </div>
                      </div>
                   )}
-                  {activeSection !== "dedup" && (
-                    /* Mock Window Body */
-                    <div className="flex-1 p-8 flex items-center justify-center relative">
-                       {/* Flow diagram mock */}
-                       <div className="w-full max-w-sm flex flex-col gap-8">
-                         <div className="p-4 rounded-xl border border-white/20 bg-white/5 text-center relative z-10">
-                           <span className="text-orange-400 font-bold font-mono">User Traffic</span>
-                         </div>
-                         
-                         <div className="h-16 w-px bg-gradient-to-b from-orange-400/50 to-transparent mx-auto absolute top-[120px] left-1/2 -translate-x-1/2"></div>
-                         
-                         <div className="p-4 rounded-xl border border-orange-500/50 bg-orange-500/10 text-center relative z-10 shadow-[0_0_30px_rgba(234,88,12,0.2)]">
-                           <span className="text-white font-bold">{section.items[activeItem]?.title}</span>
-                         </div>
 
-                         <div className="h-16 w-px bg-gradient-to-b from-orange-400/50 to-transparent mx-auto absolute bottom-[120px] left-1/2 -translate-x-1/2"></div>
-
-                         <div className="p-4 rounded-xl border border-green-500/30 bg-green-500/10 text-center relative z-10">
-                           <span className="text-green-400 font-bold font-mono">Automated Test Case</span>
-                         </div>
-                       </div>
-                    </div>
-                  )}
                </div>
             </div>
 
